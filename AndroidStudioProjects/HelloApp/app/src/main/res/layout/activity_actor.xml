@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="紅"
+            android:layout_weight="1"
+            android:background="#FF0000"
+            android:textColor="#FFFFFF"
+            android:textSize="40dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="綠"
+            android:layout_weight="1"
+            android:background="#66DD00"
+            android:textColor="#FFFFFF"
+            android:textSize="40dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="黃"
+            android:layout_weight="1"
+            android:background="#FFFF33"
+            android:textColor="#FFFFFF"
+            android:textSize="40dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="藍"
+            android:layout_weight="1"
+            android:background="#0066FF"
+            android:textColor="#FFFFFF"
+            android:textSize="40dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="這是第二行"
+            android:background="#444444"
+            android:textColor="#FFFFFF"
+            android:textSize="40dp"
+            android:id="@+id/lbltest"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btnOK"
+            android:text="OK"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+</LinearLayout>
+
+
