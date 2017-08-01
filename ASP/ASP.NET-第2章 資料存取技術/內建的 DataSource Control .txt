@@ -1,0 +1,14 @@
+內建的 DataSource Control 
+● SqlDataSource
+　　─ 對MS SQL Server最佳化，使用於SQL Server連結。
+　　─ 除 MS-SQL 外，也可支援 MySql、Oracle...等。
+● AccessDataSource
+　　─ 適用於Ole Db，例如Access。
+● ObjectDataSource
+　　─ 適用於商業邏輯物件的存取。
+● LINQDataSource
+　　─ 針對Linq技術的資料存取。
+● XmlDataSource
+　　─ 用於存取XML資料。
+● SiteMapDataSource
+　　─ 使用於存取網站導覽檔案。

@@ -1,0 +1,7 @@
+範例：設計新增、刪除與修改客戶資料系統
+● 設定對應的屬性
+● 對應的方法
+
+　　─ 新增，設定「InsertCommand」屬性，呼叫 Insert() 方法。
+　　─ 修改，設定「UpdateCommand」屬性，呼叫 Update() 方法。
+　　─ 刪除，設定「DeleteCommand」屬性，呼叫 Delete() 方法。

@@ -1,0 +1,7 @@
+如何使用 FormView 控制項
+● 設定資料來源
+　　─ 設定「DataSourceId」屬性。指定為DataSource Control。
+● 指定外觀
+　　─ 設定「DefaultMode」屬性。
+
+注意：當資料表中無資料時，資料繫結控制項不會出現在畫面上

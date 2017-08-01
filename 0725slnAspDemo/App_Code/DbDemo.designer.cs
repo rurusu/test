@@ -32,6 +32,9 @@ public partial class DbDemoDataContext : System.Data.Linq.DataContext
   partial void InserttCustomer(tCustomer instance);
   partial void UpdatetCustomer(tCustomer instance);
   partial void DeletetCustomer(tCustomer instance);
+  partial void InsertAlbumn(Albumn instance);
+  partial void UpdateAlbumn(Albumn instance);
+  partial void DeleteAlbumn(Albumn instance);
   #endregion
 	
 	public DbDemoDataContext() : 
@@ -69,6 +72,14 @@ public partial class DbDemoDataContext : System.Data.Linq.DataContext
 		get
 		{
 			return this.GetTable<tCustomer>();
+		}
+	}
+	
+	public System.Data.Linq.Table<Albumn> Albumn
+	{
+		get
+		{
+			return this.GetTable<Albumn>();
 		}
 	}
 }
@@ -206,6 +217,140 @@ public partial class tCustomer : INotifyPropertyChanging, INotifyPropertyChanged
 				this._c_address = value;
 				this.SendPropertyChanged("c_address");
 				this.Onc_addressChanged();
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Albumn")]
+public partial class Albumn : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _PID;
+	
+	private string _PDate;
+	
+	private string _PDescription;
+	
+	private string _PPath;
+	
+    #region 擴充性方法定義
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPIDChanging(int value);
+    partial void OnPIDChanged();
+    partial void OnPDateChanging(string value);
+    partial void OnPDateChanged();
+    partial void OnPDescriptionChanging(string value);
+    partial void OnPDescriptionChanged();
+    partial void OnPPathChanging(string value);
+    partial void OnPPathChanged();
+    #endregion
+	
+	public Albumn()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int PID
+	{
+		get
+		{
+			return this._PID;
+		}
+		set
+		{
+			if ((this._PID != value))
+			{
+				this.OnPIDChanging(value);
+				this.SendPropertyChanging();
+				this._PID = value;
+				this.SendPropertyChanged("PID");
+				this.OnPIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PDate", DbType="NVarChar(MAX)")]
+	public string PDate
+	{
+		get
+		{
+			return this._PDate;
+		}
+		set
+		{
+			if ((this._PDate != value))
+			{
+				this.OnPDateChanging(value);
+				this.SendPropertyChanging();
+				this._PDate = value;
+				this.SendPropertyChanged("PDate");
+				this.OnPDateChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PDescription", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+	public string PDescription
+	{
+		get
+		{
+			return this._PDescription;
+		}
+		set
+		{
+			if ((this._PDescription != value))
+			{
+				this.OnPDescriptionChanging(value);
+				this.SendPropertyChanging();
+				this._PDescription = value;
+				this.SendPropertyChanged("PDescription");
+				this.OnPDescriptionChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PPath", DbType="NVarChar(MAX)")]
+	public string PPath
+	{
+		get
+		{
+			return this._PPath;
+		}
+		set
+		{
+			if ((this._PPath != value))
+			{
+				this.OnPPathChanging(value);
+				this.SendPropertyChanging();
+				this._PPath = value;
+				this.SendPropertyChanged("PPath");
+				this.OnPPathChanged();
 			}
 		}
 	}

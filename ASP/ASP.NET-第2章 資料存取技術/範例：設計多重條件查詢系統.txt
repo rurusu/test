@@ -1,0 +1,39 @@
+範例：設計多重條件查詢系統
+ 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class WfrmAdvanQuery : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        SqlDataSource sds = new SqlDataSource();
+        sds.ConnectionString = @"Data Source=.;Initial Catalog=dbDemo;Integrated Security=True";
+        sds.SelectCommand = getSelectSql();
+        GridView1.DataSource = sds.Select(DataSourceSelectArguments.Empty);
+        GridView1.DataBind();
+    }
+
+    private string getSelectSql()
+    {
+        string sql = "SELECT * FROM tCustomer WHERE 1=1";
+        if (!string.IsNullOrEmpty(txtIdStart.Text) && !string.IsNullOrEmpty(txtIdEnd.Text))
+            sql += " AND fId>=" + txtIdStart.Text + " AND fId <=" + txtIdEnd.Text;
+        if (!string.IsNullOrEmpty(txtName.Text))
+            sql += " AND fName LIKE '%" + txtName.Text + "%'";
+        if (!string.IsNullOrEmpty(txtPhone.Text))
+            sql += " AND fPhone LIKE '%" + txtPhone.Text + "%'";
+        if (!string.IsNullOrEmpty(txtEmail.Text))
+            sql += " AND fEmail LIKE '%" + txtEmail.Text + "%'";
+        return sql;
+    }
+}

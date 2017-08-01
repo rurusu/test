@@ -1,0 +1,17 @@
+常見的GridView應用
+● 排序
+　　─ 設定「啟用排序」屬性。
+● 分頁
+　　─ 設定「啟用分頁」屬性。
+● 編輯
+　　─ 設定 DataSource Coontrol 產生 Update 指令。「啟用編輯」屬性。
+● 刪除
+　　─ 設定 DataSource Coontrol 產生 Delete 指令。「啟用刪除」屬性。
+● 結合JavaScrit
+　　─ 產生出標籤。透過標籤設定JavaScript 函式。
+● 嵌入Web控制項
+　　─ 選欄位。轉樣板。編輯樣板。
+● 客製化外觀
+　　─ 選欄位。轉樣板。指定 CSS。
+● 設定HyperLink
+　　─ 分為結合資料庫與單純網頁導覽 URL 兩種方式。

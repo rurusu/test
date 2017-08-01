@@ -1,0 +1,6 @@
+本章大綱
+　v .NET平台的資料存取技術
+　v 認識 DataSource 技術
+　v 使用 DataSource Control 設計資料庫程式
+　v 資料繫結控制項(Data Bound Control)
+　v 透過 DataSource API 設計資料庫程式

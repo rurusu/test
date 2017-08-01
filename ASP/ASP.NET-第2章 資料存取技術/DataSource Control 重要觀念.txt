@@ -1,0 +1,9 @@
+DataSource Control 重要觀念
+● 如何設定資料來源
+　　─ 設定 ConnectionString。
+● 如何設定過濾條件
+　　─ 透過屬性與精靈產生 SQL 指令的 WHERE 語法。
+● 透過 DataSource 控制項查詢資料
+　　─ 包含如何設計單一條件查詢與多重條件查詢。
+● 透過 DataSource 控制項更新資料(新增、刪
+　　─ 包含對資料的新增、刪除與修改。

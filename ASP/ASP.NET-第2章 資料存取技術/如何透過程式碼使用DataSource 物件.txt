@@ -1,0 +1,11 @@
+如何透過程式碼使用 DataSource 物件
+● 實體化DataSource物件
+● 指定資料來源
+　　─ 設定SQL指令(Select,Insert,Delete,Update)
+● 透過異動Method執行SQL指令
+　─ Select()取得查詢後的結果
+　─ Insert、Delete、Update執行資料異動指令
+● 將資料來源繫結到控制項上
+　─ 設定 DataSource屬性外，還必須呼叫 DataBind() 方法。
+
+注意：當資料表中無資料時，資料繫結控制項不會出現在畫面上

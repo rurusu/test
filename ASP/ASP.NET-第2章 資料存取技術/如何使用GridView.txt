@@ -1,0 +1,7 @@
+如何使用 GridView 控制項
+● 設定資料來源
+　　─ 設定「DataSourceId」屬性。指定為DataSource Control。
+● 指定外觀
+　　─ 內建多種範本供選擇。可透過 CSS 自訂 GridView 外觀。
+
+注意：當資料表中無資料時，資料繫結控制項不會出現在畫面上

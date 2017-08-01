@@ -1,0 +1,8 @@
+範例：資料查詢
+● Select() 方法
+　　─ 設定 SelectCommand屬性。呼叫 Select() 方法。
+● IEmurable 介面
+　　─ Select() 方法傳回列舉介面。必須將物件轉換成 DataView物件
+● DataSourceSelectArgument
+　　─ Select() 方法需指定參數，若無傳遞參數，則必須填入 Null 。
+　　─ 使用 DataSourceSelectArgument.Empty。

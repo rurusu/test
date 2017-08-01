@@ -1,0 +1,10 @@
+如何使用 FormView 控制項
+● 新增相關事件
+　─ ItemInserting
+　─ ItemInserted
+● 修改相關事件
+　─ ItemUpdating
+　─ ItemUpdated
+● 刪除相關事件
+　─ ItemDeleting
+　─ ItemDeleted

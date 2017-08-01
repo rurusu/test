@@ -1,0 +1,24 @@
+範例：設計單一資料查詢系統
+ 
+
+    protected void Button5_Click(object sender, EventArgs e)
+    {
+        SqlDataSource sds = new SqlDataSource();
+        sds.ConnectionString = @"Data Source=.;Initial Catalog=dbDemo;Integrated Security=True";
+        sds.SelectCommand = "SELECT * FROM tCustomer WHERE fName LIKE '%"+txtKeyword.Text+"%'";
+        DataView dv=sds.Select(DataSourceSelectArguments.Empty)as DataView;
+        GridView1.DataSource = dv;
+        GridView1.DataBind();
+
+        if (dv.Count == 0)
+        {
+            lblMessage.Visible = true;
+            lblMessage.Text = "沒有資料";
+            return;
+        }
+        txtId.Text = dv.Table.Rows[0]["fId"].ToString();
+        txtName.Text = dv.Table.Rows[0]["fName"].ToString();
+        txtPhone.Text = dv.Table.Rows[0]["fPhone"].ToString();
+        txtEmail.Text = dv.Table.Rows[0]["fEmail"].ToString();
+        txtAddress.Text = dv.Table.Rows[0]["fAddress"].ToString();
+    }

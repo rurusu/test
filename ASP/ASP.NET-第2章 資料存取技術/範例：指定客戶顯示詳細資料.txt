@@ -1,0 +1,7 @@
+範例：指定客戶顯示詳細資料
+● 在 .aspx 中設定 DataSource控制項
+　　─ 設定 WHERE 條件為 Control ，指向畫面上的 DropDownList。
+● 使用 DetailView 顯示詳細資料
+　　─ 在 DetailView 上繫結資料來源。
+● 開啟 DropDownList 的Postback
+　　─ 在 DropDownList 控制項中設定「AutoPostback」屬性。

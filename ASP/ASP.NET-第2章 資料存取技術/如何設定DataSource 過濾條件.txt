@@ -1,0 +1,13 @@
+如何設定DataSource 過濾條件
+● Control
+　　─ 以畫面上的控制項作為查詢條件。
+● Cookie
+　　─ 以 Cookie 作為查詢條件。
+● Form
+　　─ 以 POST 協定傳輸的資料作為查詢條件。
+● Session
+　　─ 以 Session 物件中的資料作為查詢條件。
+● Profile
+　　─ 以 Profile  資料庫中的資料作為查詢條件。
+● QueryString
+　　─ 以 GET 協定傳輸的資料作為查詢條件。

@@ -1,0 +1,50 @@
+練習：設計購物車系統
+ 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class WfrShoppingAddToCart : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        string id = Request.QueryString["pid"];
+        if (string.IsNullOrEmpty(id))
+            Response.Redirect("WfrmShopping.aspx");
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        string id = Request.QueryString["pid"];
+        SqlDataSource sds = new SqlDataSource();
+        sds.ConnectionString = @"Data Source=.;Initial Catalog=dbDemo;Integrated Security=True";
+        sds.SelectCommand = "SELECT * FROM tProduct WHERE fId="+ id;
+        DataView dv = sds.Select(DataSourceSelectArguments.Empty) as DataView;
+        if (dv.Count == 0)
+        {
+            Response.Redirect("WfrmShopping.aspx");
+            return;
+        }
+        string sql = "INSERT INTO tShippingCart (";
+        sql += "fDate,";
+        sql += "fCustomer,";
+        sql += "fProduct,";
+        sql += "fCount,";
+        sql += "fCost,";
+        sql += "fPrice";
+        sql += ")VALUES(";
+        sql += "'"+DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")+"',";
+        sql += "'Marco',";
+        sql += "'"+dv.Table.Rows[0]["fName"].ToString()+"',";
+        sql += "" + TextBox1.Text+ ",";
+        sql += "" + dv.Table.Rows[0]["fCost"].ToString() + ",";
+        sql += "" + dv.Table.Rows[0]["fPrice"].ToString() + ")";
+        sds.InsertCommand = sql;
+        sds.Insert();
+        Response.Redirect("WfrmShopping.aspx");
+    }
+}
