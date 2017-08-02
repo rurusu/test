@@ -35,8 +35,7 @@
                 <td>
                     <asp:Label ID="Label1" runat="server" Text="圖片敘述"></asp:Label>
                     <asp:Label ID="Label2" runat="server" Text="*" ForeColor="#FF0066"></asp:Label>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbDescription" ErrorMessage="圖片描述尚未填寫"></asp:RequiredFieldValidator>
-                    <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbDescription" ErrorMessage="圖片描述尚未填寫" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
