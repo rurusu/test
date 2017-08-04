@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbASP_demo" Class="DbDemoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=dbASP_demo;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dbASP_demoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tCustomer" Member="tCustomer">
+    <Type Name="tCustomer">
+      <Column Name="c_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="c_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="c_phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="c_email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="c_address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
