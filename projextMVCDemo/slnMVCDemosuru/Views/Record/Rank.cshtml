@@ -1,0 +1,39 @@
+﻿
+@model IEnumerable<personal_sport_menu>
+@{
+    ViewBag.Title = "Rank";
+}
+
+<h3>用戶資料列表</h3>
+<p>
+    <a href="~/A/New">註冊</a>
+</p>
+
+
+<h2>Rank 第一版(列資料)</h2>
+
+<table border="1">
+    <tr>
+        <td>用戶ID</td>
+        <td>運動日期</td>
+        <td>運動項目</td>
+        <td>運動距離</td>
+        <td>運動時間</td>
+    </tr>
+   
+        @{
+            foreach (personal_sport_menu record in Model)
+            {
+                <tr>
+                    <td>@record.user_id.ToString()</td>
+                    <td>@record.spdate.ToString()</td>
+                    <td>@record.SportID.ToString()</td>
+                    <td>@record.distance.ToString()</td>
+                    <td>@record.times.ToString()</td>
+                </tr>
+            }
+        }
+           
+</table>
+    
+

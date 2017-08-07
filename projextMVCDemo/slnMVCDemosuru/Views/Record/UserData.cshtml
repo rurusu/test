@@ -1,0 +1,25 @@
+﻿@model IEnumerable<bjuser>
+@{
+    ViewBag.Title = "UserData";
+}
+
+<h2>UserData</h2>
+<table border="1">
+    <tr>
+        <td>帳號</td>
+        <td>密碼</td>
+        <td>信箱</td>
+        <td>生日</td>
+    </tr>
+    @{ 
+        foreach(bjuser user in Model)
+        {
+            <tr>
+                <td>@user.u_name.ToString()</td>
+                <td>@user.u_password.ToString()</td>
+                <td>@user.u_email.ToString()</td>
+                <td>@user.u_birth.ToString()</td>
+            </tr>
+        }
+    }
+</table>

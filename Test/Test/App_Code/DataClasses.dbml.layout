@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d5dec049-7fa4-45bd-b5c5-189b9319bde6" absoluteBounds="5, 1.25, 2, 2.0916874186197916">
+      <DataClassMoniker Name="/DataClassesDataContext/bjuser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="daa6cf22-5c8b-47f1-89fb-76810da829e4" absoluteBounds="5.015, 1.71, 1.9700000000000002, 1.5316874186197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="71493bfb-54a3-4474-ac6c-fb53f1063581" absoluteBounds="2.5, 2.875, 2, 2.4612756347656251">
+      <DataClassMoniker Name="/DataClassesDataContext/personal_sport_menu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c738132-d3d3-4d88-9d4c-99daa8ba3d86" absoluteBounds="2.5149999999999997, 3.335, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5 : 3.1083437093099); (4.5 : 3.1083437093099)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/bjuser/bjuser_personal_sport_menu" />
+      <nodes>
+        <classShapeMoniker Id="d5dec049-7fa4-45bd-b5c5-189b9319bde6" />
+        <classShapeMoniker Id="71493bfb-54a3-4474-ac6c-fb53f1063581" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="025b8b4d-e664-469e-8621-e6eae78e5ee4" absoluteBounds="1.625, 1.125, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/DataClassesDataContext/SportType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ca0450f-14b2-4840-a081-1e43bf91607b" absoluteBounds="1.6400000000000001, 1.585, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.0625 : 2.47751098632813); (3.0625 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/SportType/SportType_personal_sport_menu" />
+      <nodes>
+        <classShapeMoniker Id="025b8b4d-e664-469e-8621-e6eae78e5ee4" />
+        <classShapeMoniker Id="71493bfb-54a3-4474-ac6c-fb53f1063581" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
