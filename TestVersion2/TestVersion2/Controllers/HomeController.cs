@@ -29,9 +29,10 @@ namespace TestVersion2.Controllers
                 return new RedirectResult("Test");
 
             }
-            return new RedirectResult("About");
+            else
+                return new RedirectResult("About");
         }
-        [Authorize]
+
         public ActionResult Test()
         {
             ViewBag.Message = "登入成功";
