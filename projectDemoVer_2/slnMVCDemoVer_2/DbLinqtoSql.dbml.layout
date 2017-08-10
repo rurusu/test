@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DbLinqtoSql">
+  <DataContextMoniker Name="/DbLinqtoSqlDataContext" />
+  <nestedChildShapes>
+    <classShape Id="83bcc8f8-b949-44c6-a339-49c94d9f9ebe" absoluteBounds="3.625, 2.25, 2, 2.0916874186197916">
+      <DataClassMoniker Name="/DbLinqtoSqlDataContext/bjuser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b43b3df-d421-4a8e-937b-21973ee06031" absoluteBounds="3.64, 2.71, 1.9700000000000002, 1.5316874186197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80fdc4dc-aa92-4133-b2b4-e3a90273cc26" absoluteBounds="2, 3.875, 2, 2.4612756347656251">
+      <DataClassMoniker Name="/DbLinqtoSqlDataContext/personal_sport_menu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b216db15-a2f9-465b-b6b3-b1ceb8f3bdc1" absoluteBounds="2.015, 4.335, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.8125005 : 4.34168741861979); (4.8125005 : 5.33898202669271); (4 : 5.33898202669271)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DbLinqtoSqlDataContext/bjuser/bjuser_personal_sport_menu" />
+      <nodes>
+        <classShapeMoniker Id="83bcc8f8-b949-44c6-a339-49c94d9f9ebe" />
+        <classShapeMoniker Id="80fdc4dc-aa92-4133-b2b4-e3a90273cc26" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9aeebb67-50a4-4469-87b1-78820bdef318" absoluteBounds="6.25, 5.625, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/DbLinqtoSqlDataContext/SportType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d3e0ed6-34fd-4ca2-b265-4281d522c001" absoluteBounds="6.265, 6.085, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.25 : 5.98063781738281); (4 : 5.98063781738281)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DbLinqtoSqlDataContext/SportType/SportType_personal_sport_menu" />
+      <nodes>
+        <classShapeMoniker Id="9aeebb67-50a4-4469-87b1-78820bdef318" />
+        <classShapeMoniker Id="80fdc4dc-aa92-4133-b2b4-e3a90273cc26" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
